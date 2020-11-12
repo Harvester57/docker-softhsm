@@ -1,6 +1,6 @@
 FROM debian:10.6-slim
 
-RUN apt-get update && apt-get install -y softhsm git-core build-essential cmake libssl-dev libseccomp-dev --no-install-recommends && \
+RUN apt-get update && apt-get install -y softhsm git-core build-essential cmake libssl-dev libseccomp-dev gnupg2 ca-certificates --no-install-recommends && \
   rm -rf /var/lib/apt/lists/*
 
 RUN git clone https://github.com/SUNET/pkcs11-proxy
