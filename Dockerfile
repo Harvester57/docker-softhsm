@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM debian:10.6-slim
 
 RUN apt-get update && apt-get install -y softhsm git-core build-essential cmake libssl-dev libseccomp-dev --no-install-recommends && \
   rm -rf /var/lib/apt/lists/*
